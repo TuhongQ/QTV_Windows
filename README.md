@@ -26,7 +26,9 @@ npm ci
 npm run dist
 ```
 
-The portable executable is written to `dist/` and is intentionally excluded from source control.
+The portable executable is written to `dist/`. The latest tested package is also included in [`releases/`](releases/) for convenient download:
+
+- [MiBoxOS-Windows-1.1.0.exe](releases/MiBoxOS-Windows-1.1.0.exe)
 
 ## Project layout
 
