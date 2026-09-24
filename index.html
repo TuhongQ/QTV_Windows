@@ -1,0 +1,21 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MiBox OS Windows</title><link rel="stylesheet" href="styles.css"></head>
+<body><div class="ambient"></div><main class="app">
+  <header><div class="brand"><img src="assets/icon.svg"><div><b>MiBox OS</b><small>WINDOWS TEST EDITION</small></div></div><div class="clock"><i></i><span id="clock">00:00</span></div></header>
+  <section class="workspace">
+    <article class="viewer">
+      <div class="screen" id="screen"><video id="video" controls playsinline></video><div class="empty" id="empty"><span>▶</span><b>选择频道开始播放</b><small>支持 HLS、MP4 和本地视频</small></div><div class="loading" id="loading">正在连接…</div></div>
+      <div class="now"><div><small>正在播放</small><strong id="nowTitle">尚未选择频道</strong></div><span id="nowGroup">MI BOX OS</span></div>
+      <div class="controls"><button class="focusable" id="prev">‹ 上一台</button><button class="focusable accent" id="toggle">▶ 播放</button><button class="focusable" id="next">下一台 ›</button><button class="focusable" id="favorite">☆ 收藏</button><button class="focusable" id="full">⛶ 全屏</button></div>
+    </article>
+    <aside>
+      <div class="source-line"><select id="source" class="focusable"></select><button id="more" class="focusable">•••</button></div>
+      <div class="tabs"><button class="focusable active" data-mode="all">全部</button><button class="focusable" data-mode="favorites">收藏</button><button class="focusable" data-mode="recent">最近</button><button class="focusable" data-mode="available">可用</button></div>
+      <input id="search" class="focusable" placeholder="搜索频道 / 分类">
+      <div class="summary"><span id="summary">正在准备频道…</span><span id="progress"></span></div>
+      <div class="channels" id="channels"></div>
+    </aside>
+  </section>
+  <footer><span>方向键 导航</span><span>Enter 确认</span><span>Esc 返回/退出全屏</span><span>F11 窗口全屏</span></footer>
+  <div class="menu" id="menu"><button data-action="update">↻ 更新频道</button><button data-action="test">◉ 测试直播源</button><button data-action="clear">⌫ 隐藏失效源</button><button data-action="restore">↺ 恢复隐藏源</button><button data-action="playlist">＋ 导入 M3U</button><button data-action="video">▣ 打开本地视频</button><button data-action="url">⌁ 打开直播网址</button></div>
+  <div class="toast" id="toast"></div>
+</main><script src="node_modules/hls.js/dist/hls.min.js"></script><script src="renderer.js"></script></body></html>

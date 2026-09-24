@@ -1,0 +1,31 @@
+{
+  "name": "mibox-os-windows",
+  "version": "1.1.0",
+  "description": "MiBox OS Windows desktop test edition",
+  "main": "main.js",
+  "author": "MiBox OS",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable"
+  },
+  "dependencies": {
+    "hls.js": "^1.6.13"
+  },
+  "devDependencies": {
+    "electron": "^38.2.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.mibox.os.windows",
+    "productName": "MiBox OS",
+    "asar": true,
+    "files": ["main.js", "preload.js", "index.html", "styles.css", "renderer.js", "assets/**/*", "playlists/**/*", "node_modules/hls.js/dist/hls.min.js"],
+    "win": {
+      "signAndEditExecutable": false,
+      "signExecutable": false,
+      "target": [{"target": "portable", "arch": ["x64"]}],
+      "artifactName": "MiBoxOS-Windows-${version}.exe"
+    }
+  }
+}
